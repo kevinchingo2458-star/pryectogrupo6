@@ -94,7 +94,7 @@ public class App {
                     break;
 
                 default:
-                    System.out.println("Opcion invalida. Intenta de nuevo.");
+                    System.out.println("Opcion invalida.");
             }
         } while (opcion != 4);
 
