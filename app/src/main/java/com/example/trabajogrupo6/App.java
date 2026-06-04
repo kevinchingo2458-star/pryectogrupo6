@@ -88,7 +88,7 @@ public class App {
                     }
                     break;
 
-                case 3:
+                case 3: // echo por andi 
                     System.out.print("Ingresa la base del triangulo: ");
                     double base = scanner.nextDouble();
                     System.out.print("Ingresa la altura del triangulo: ");
