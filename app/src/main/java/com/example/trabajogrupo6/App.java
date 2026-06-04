@@ -3,12 +3,94 @@
  */
 package com.example.trabajogrupo6;
 
+import java.util.Scanner;
+
 public class App {
-    public String getGreeting() {
-        return "Hello World!";
+    
+    // Metodo para calcular el promedio de 3 notas
+    public static double promedio(double nota1, double nota2, double nota3) {
+        return (nota1 + nota2 + nota3) / 3;
+    }
+
+    // Metodo para convertir de Celsius a Fahrenheit
+    public static double celsiusAFahrenheit(double celsius) {
+        return (celsius * 9.0 / 5.0) + 32;
+    }
+
+    // Metodo para convertir de Fahrenheit a Celsius
+    public static double fahrenheitACelsius(double fahrenheit) {
+        return (fahrenheit - 32) * 5.0 / 9.0;
+    }
+
+    // Metodo para calcular el area de un triangulo (base * altura / 2)
+    public static double areaTriangulo(double base, double altura) {
+        return (base * altura) / 2;
     }
 
     public static void main(String[] args) {
-        System.out.println(new App().getGreeting());
+        Scanner scanner = new Scanner(System.in);
+        int opcion;
+
+        do {
+            System.out.println("\n=== MENU PRINCIPAL ===");
+            System.out.println("1. Calcular promedio de 3 notas");
+            System.out.println("2. Convertir grados (Celsius <-> Fahrenheit)");
+            System.out.println("3. Calcular area de un triangulo");
+            System.out.println("4. Salir");
+            System.out.print("Elige una opcion (1-4): ");
+            opcion = scanner.nextInt();
+
+            switch (opcion) {
+                case 1:
+                    System.out.print("Ingresa la primera nota: ");
+                    double n1 = scanner.nextDouble();
+                    System.out.print("Ingresa la segunda nota: ");
+                    double n2 = scanner.nextDouble();
+                    System.out.print("Ingresa la tercera nota: ");
+                    double n3 = scanner.nextDouble();
+                    double prom = promedio(n1, n2, n3);
+                    System.out.printf("El promedio de las tres notas es: %.2f\n", prom);
+                    break;
+
+                case 2:
+                    System.out.println("\n--- Conversion de Temperatura ---");
+                    System.out.println("a) Convertir de Celsius a Fahrenheit");
+                    System.out.println("b) Convertir de Fahrenheit a Celsius");
+                    System.out.print("Elige una opcion (a/b): ");
+                    char subOpcion = scanner.next().charAt(0);
+                    if (subOpcion == 'a' || subOpcion == 'A') {
+                        System.out.print("Ingresa los grados Celsius: ");
+                        double celsius = scanner.nextDouble();
+                        double fahr = celsiusAFahrenheit(celsius);
+                        System.out.printf("%.2f C equivale a %.2f F\n", celsius, fahr);
+                    } else if (subOpcion == 'b' || subOpcion == 'B') {
+                        System.out.print("Ingresa los grados Fahrenheit: ");
+                        double fahrenheit = scanner.nextDouble();
+                        double celsiusResult = fahrenheitACelsius(fahrenheit);
+                        System.out.printf("%.2f F equivale a %.2f C\n", fahrenheit, celsiusResult);
+                    } else {
+                        System.out.println("Opcion no valida.");
+                    }
+                    break;
+
+                case 3:
+                    System.out.print("Ingresa la base del triangulo: ");
+                    double base = scanner.nextDouble();
+                    System.out.print("Ingresa la altura del triangulo: ");
+                    double altura = scanner.nextDouble();
+                    double area = areaTriangulo(base, altura);
+                    System.out.printf("El area del triangulo es: %.2f\n", area);
+                    break;
+
+                case 4:
+                    System.out.println("Saliendo del programa...");
+                    break;
+
+                default:
+                    System.out.println("Opcion invalida. Intenta de nuevo.");
+            }
+        } while (opcion != 4);
+
+        scanner.close();
     }
 }
