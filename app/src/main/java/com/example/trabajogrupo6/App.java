@@ -48,6 +48,7 @@ public class App {
                     //ingrese la segunda nota
                     System.out.print("Ingresa la segunda nota: ");
                     double n2 = scanner.nextDouble();
+                    //ingrese la tercer nota
                     System.out.print("Ingresa la tercera nota: ");
                     double n3 = scanner.nextDouble();
                     double prom = promedio(n1, n2, n3);
