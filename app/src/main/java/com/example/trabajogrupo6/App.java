@@ -90,7 +90,7 @@ public class App {
 
                 case 3: // echo por andi 
                     System.out.print("Ingresa la base del triangulo: ");
-                    double base = scanner.nextDouble();
+                    double base = scanner.nextDouble(); // altira del triangulo andi 
                     System.out.print("Ingresa la altura del triangulo: ");
                     double altura = scanner.nextDouble();
                     double area = areaTriangulo(base, altura);
