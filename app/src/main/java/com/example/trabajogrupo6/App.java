@@ -6,7 +6,7 @@ package com.example.trabajogrupo6;
 import java.util.Scanner;
 
 public class App {
-    
+//Meadrdo
     // Metodo para calcular el promedio de 3 notas
     public static double promedio(double nota1, double nota2, double nota3) {
         return (nota1 + nota2 + nota3) / 3;
@@ -94,7 +94,7 @@ public class App {
                     break;
 
                 default:
-                    System.out.println("Opcion invalida.");
+                    System.out.println("Opcion invalida. Intenta de nuevo.");
             }
         } while (opcion != 4);
 
