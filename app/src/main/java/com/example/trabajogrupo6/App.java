@@ -11,7 +11,7 @@ public class App {
     public static double promedio(double nota1, double nota2, double nota3) {
         return (nota1 + nota2 + nota3) / 3;
     }
-
+// michael
     // Metodo para convertir de Celsius a Fahrenheit
     public static double celsiusAFahrenheit(double celsius) {
         return (celsius * 9.0 / 5.0) + 32;
@@ -58,20 +58,27 @@ public class App {
                     System.out.println("b) Convertir de Fahrenheit a Celsius");
                     System.out.print("Elige una opcion (a/b): ");
                     char subOpcion = scanner.next().charAt(0);
-                    if (subOpcion == 'a' || subOpcion == 'A') {
+                switch (subOpcion) {
+                    case 'a':
+                    case 'A':
                         System.out.print("Ingresa los grados Celsius: ");
                         double celsius = scanner.nextDouble();
                         double fahr = celsiusAFahrenheit(celsius);
                         System.out.printf("%.2f C equivale a %.2f F\n", celsius, fahr);
-                    } else if (subOpcion == 'b' || subOpcion == 'B') {
+                        break;
+                    case 'b':
+                    case 'B':
                         System.out.print("Ingresa los grados Fahrenheit: ");
                         double fahrenheit = scanner.nextDouble();
                         double celsiusResult = fahrenheitACelsius(fahrenheit);
                         System.out.printf("%.2f F equivale a %.2f C\n", fahrenheit, celsiusResult);
-                    } else {
+                        break;
+                    default:
                         System.out.println("Opcion no valida.");
-                    }
+                        break;
+                }
                     break;
+
 
                 case 3:
                     System.out.print("Ingresa la base del triangulo: ");
