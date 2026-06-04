@@ -51,6 +51,7 @@ public class App {
                     //ingrese la tercer nota
                     System.out.print("Ingresa la tercera nota: ");
                     double n3 = scanner.nextDouble();
+                    //promedio
                     double prom = promedio(n1, n2, n3);
                     System.out.printf("El promedio de las tres notas es: %.2f\n", prom);
                     break;
