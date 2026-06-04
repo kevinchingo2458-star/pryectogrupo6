@@ -42,8 +42,10 @@ public class App {
 
             switch (opcion) {
                 case 1:
+                    //ingrese la primer nota
                     System.out.print("Ingresa la primera nota: ");
                     double n1 = scanner.nextDouble();
+                    //ingrese la segunda nota
                     System.out.print("Ingresa la segunda nota: ");
                     double n2 = scanner.nextDouble();
                     System.out.print("Ingresa la tercera nota: ");
