@@ -90,7 +90,7 @@ public class App {
                     break;
 
                 case 4:
-                    System.out.println("Saliendo del programa...");
+                    System.out.println("Saliendo del programa");
                     break;
 
                 default:
