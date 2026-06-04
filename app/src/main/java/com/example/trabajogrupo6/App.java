@@ -94,7 +94,7 @@ public class App {
                     System.out.print("Ingresa la altura del triangulo: ");
                     double altura = scanner.nextDouble();
                     double area = areaTriangulo(base, altura);
-                    System.out.printf("El area del triangulo es: %.2f\n", area);
+                    System.out.printf("El area del triangulo es: %.2f\n", area);//  el resultado se muesta andi
                     break;
 
                 case 4:
